@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CODEMIA</title>
+  <meta name="description" content="CODEMIA is a student technical club fostering coding, projects, hackathons and peer learning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="codemia.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="CODEMIA home">
+        <span class="logo" aria-hidden="true"></span>
+        <span>
+          <h1>CODEMIA</h1>
+          <span class="tag">  Where Coders Become Leaders</span>
+        </span>
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#projects">Projects</a>
+        <a href="#team">Team</a>
+        <a href="#contact" class="cta">Join Us</a>
+      </nav>
+      <button class="burger" aria-label="Open menu" id="burger">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="home" class="hero">
+    <div class="wrap">
+      <div class="grid-hero">
+        <div>
+          <div class="pills">
+            <span class="pill mono">#coding</span>
+            <span class="pill mono">#ai-ml</span>
+            <span class="pill mono">#web-dev</span>
+            <span class="pill mono">#hackathons</span>
+          </div>
+          <h2>Build. Learn. Ship.<br/>Grow with <span style="background:linear-gradient(90deg,var(--primary),var(--primary-2)); -webkit-background-clip:text; background-clip:text; color:transparent">CODEMIA</span></h2>
+          <p>CODEMIA is a student-led technical club fostering a practical coding culture through workshops, projects, and competitive events. Join us to collaborate, contribute, and create impact.</p>
+          <div class="btns" style="margin:18px 0 24px">
+            <a class="btn primary" href="#events">See Upcoming Events →</a>
+            <a class="btn ghost" href="#contact">Become a Member</a>
+          </div>
+          <div class="hero-card">
+            <div class="caps">Next up</div>
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
+              <div>
+                <div class="mono" style="font-size:18px">CodeSprint 1.0 — Intro to Git & Open Source</div>
+                <div class="meta">Auditorium | <span id="nextDate">28 Sep 2025, 11:00 AM</span></div>
+              </div>
+              <div class="stat" style="min-width:220px">
+                <div class="caps">Starts in</div>
+                <b id="countdown">--d --h --m --s</b>
+              </div>
+            </div>
+            <div class="stats">
+              <div class="stat"><div class="caps">Members</div><b id="members">15</b></div>
+              <div class="stat"><div class="caps">Events Hosted</div><b id="eventsCount">0</b></div>
+              <div class="stat"><div class="caps">Projects</div><b id="projectsCount">0</b></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <h4>What we do</h4>
+            <p class="meta">Hands‑on workshops • Weekly coding challenges • Project sprints • Speaker sessions • Inter‑club collaborations</p>
+            <div class="hr"></div>
+            <h4>Domains</h4>
+            <p class="meta">Web (MERN) • App (Flutter) • AI/ML • DevOps • Cybersecurity • Competitive Programming</p>
+            <div class="hr"></div>
+            <h4>Get involved</h4>
+            <ul>
+              <li>Join our WhatsApp/Discord (links below).</li>
+              <li>Bring a project idea; we’ll help you build it.</li>
+              <li>Compete in CODEMIA’s signature challenges.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-title">
+          <h3>About CODEMIA</h3>
+          <p>Founded by students, for students — under LPU’s vibrant tech culture.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="caps">Mission</div>
+            <h4>Peer‑powered learning</h4>
+            <p>Enable students to learn by building — turning ideas into deployable products through mentorship, code reviews, and collaboration.</p>
+          </article>
+          <article class="card">
+            <div class="caps">Vision</div>
+            <h4>Ship real‑world projects</h4>
+            <p>Create a pipeline where members build portfolio‑grade projects, contribute to open source, and showcase skills to recruiters.</p>
+          </article>
+          <article class="card">
+            <div class="caps">Values</div>
+            <h4>Open • Kind • Curious</h4>
+            <p>We welcome beginners, celebrate wins, document learnings, and push for consistent, incremental progress.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events">
+      <div class="wrap">
+        <div class="section-title">
+          <h3>Upcoming Events</h3>
+          <p>Hands‑on, beginner‑friendly, and fun.</p>
+        </div>
+        <div class="cards" id="upcomingList"></div>
+
+        <div class="section-title" style="margin-top:34px">
+          <h3>Past Highlights</h3>
+          <p>What we’ve been up to.</p>
+        </div>
+        <div class="gallery" id="pastGallery"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-title">
+          <h3>Member Projects</h3>
+          <p>Showcasing what our community ships.</p>
+        </div>
+        <div class="cards" id="projectsList"></div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team">
+      <div class="wrap">
+        <div class="section-title">
+          <h3>Core Team</h3>
+          <p>Reach out to collaborate or volunteer.</p>
+        </div>
+        <div class="team" id="teamGrid"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT / JOIN -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-title">
+          <h3>Join CODEMIA</h3>
+          <p>Register interest. We’ll get back within 48 hours.</p>
+        </div>
+        <div class="contact">
+          <form id="joinForm" novalidate>
+            <label>Full Name<input required name="name" placeholder="Your name"/></label>
+            <label>Email<input required type="email" name="email" placeholder="you@lpu.in"/></label>
+            <label>Department / Year<input name="dept" placeholder="CSE, 1st year"/></label>
+            <label>What interests you?
+              <textarea name="message" rows="4" placeholder="Web / AI‑ML / CP / Events / Design ..."></textarea>
+            </label>
+            <button class="btn primary" type="submit">Submit →</button>
+            <div class="notice">This demo stores nothing. Connect to Google Forms or your backend later.</div>
+          </form>
+          <div>
+            <div class="card">
+              <h4>Connect with us</h4>
+              <p class="meta">Follow for updates, memes, and event drops.</p>
+              <div class="socials">
+                <span class="badge">📸 Instagram</span>
+                <span class="badge">💼 LinkedIn</span>
+                <span class="badge">💬 WhatsApp</span>
+                <span class="badge">🐙 GitHub</span>
+              </div>
+              <div class="hr"></div>
+              <h4>Venue & Timings</h4>
+              <p class="meta">Most sessions happen on campus. Check event banner for room details.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© <span id="year"></span> CODEMIA — LPU Student Technical Club</div>
+      <div class="mono" style="margin-top:6px">Made with &lt;/&gt; by the CODEMIA team</div>
+    </div>
+  </footer>
+  <script src="codemia.js"></script>
+
+
+</body>
+</html>
