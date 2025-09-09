@@ -156,40 +156,54 @@
 
     <!-- CONTACT / JOIN -->
     <section id="contact">
-      <div class="wrap">
-        <div class="section-title">
-          <h3>Join CODEMIA</h3>
-          <p>Register interest. We’ll get back within 48 hours.</p>
+  <div class="wrap">
+    <div class="section-title">
+      <h3>Join CODEMIA</h3>
+      <p>Register your interest. We'll get back within 48 hours.</p>
+    </div>
+    <div class="contact">
+      
+      <!-- Option A: Keep existing form that redirects to Google Forms -->
+      <form id="joinForm" novalidate>
+        <label>Full Name<input required name="name" placeholder="Your name"/></label>
+        <label>Email<input required type="email" name="email" placeholder="you@gmail.com"/></label>
+        <label>Department / Year<input name="dept" placeholder="CSE, 1st year"/></label>
+        <label>What interests you?
+          <textarea name="message" rows="4" placeholder=" Events / Graphic Design / Content Creation / Technical Department.."></textarea>
+        </label>
+        <button class="btn primary" type="submit">Open Registration Form →</button>
+        <div class="notice">
+          This will open Google Forms in a new tab where you can submit your details securely.
         </div>
-        <div class="contact">
-          <form id="joinForm" novalidate>
-            <label>Full Name<input required name="name" placeholder="Your name"/></label>
-            <label>Email<input required type="email" name="email" placeholder="you@lpu.in"/></label>
-            <label>Department / Year<input name="dept" placeholder="CSE, 1st year"/></label>
-            <label>What interests you?
-              <textarea name="message" rows="4" placeholder="Web / AI‑ML / CP / Events / Design ..."></textarea>
-            </label>
-            <button class="btn primary" type="submit">Submit →</button>
-            <div class="notice">This demo stores nothing. Connect to Google Forms or your backend later.</div>
-          </form>
-          <div>
-            <div class="card">
-              <h4>Connect with us</h4>
-              <p class="meta">Follow for updates, memes, and event drops.</p>
-              <div class="socials">
-                <span class="badge">📸 Instagram</span>
-                <span class="badge">💼 LinkedIn</span>
-                <span class="badge">💬 WhatsApp</span>
-                <span class="badge">🐙 GitHub</span>
-              </div>
-              <div class="hr"></div>
-              <h4>Venue & Timings</h4>
-              <p class="meta">Most sessions happen on campus. Check event banner for room details.</p>
-            </div>
+      </form>
+
+
+      <div>
+        <div class="card">
+          <h4>Connect with us</h4>
+          <p class="meta">Follow for updates, memes, and event drops.</p>
+          <div class="socials">
+            <span class="badge">📸 Instagram</span>
+            <span class="badge">💼 LinkedIn</span>
+            <span class="badge">💬 WhatsApp</span>
+            <span class="badge">🐙 GitHub</span>
           </div>
+          <div class="hr"></div>
+          <h4>Venue & Timings</h4>
+          <p class="meta">Most sessions happen on campus. Check event banner for room details.</p>
+          <div class="hr"></div>
+          <h4>Quick Stats</h4>
+          <p class="meta">
+            📊 <span id="members-footer">15</span> members registered<br>
+            🎯 <span id="events-footer">0</span> events completed<br>
+            🚀 <span id="projects-footer">0</span> projects built
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   </main>
 
   <footer>
