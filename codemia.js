@@ -8,7 +8,7 @@ const data = {
     when: '2025-09-28T11:00:00',
     venue: 'Auditorium'
   },
-  stats: { members: 15, events: 0, projects: 0 },
+  stats: { members: 5, events: 0, projects: 13 },
   upcoming: [
     { title:'Git & GitHub Hands-on', date:'28 Sep 2025', time:'11:00 AM', mode:'On-Campus', cta:'#', desc:'Learn version control, branching, and open-source workflow.', tag:'Workshop' },
     { title:'AlgoArena #1', date:'05 Oct 2025', time:'07:00 PM', mode:'Online', cta:'#', desc:'90-minute competitive programming showdown.', tag:'Contest' },
@@ -108,4 +108,5 @@ function updateMemberCount(newCount) {
 }
 
 window.updateMemberCount = updateMemberCount;
+
 
