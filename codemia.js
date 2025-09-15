@@ -99,24 +99,7 @@ data.team.forEach(m => {
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const GOOGLE_FORM_URL = 'https://forms.gle/qfPNbMwuTRN77n1r9';
 
-document.getElementById('joinForm')?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  const formData = new FormData(e.target);
-  const name = formData.get('name');
-  const email = formData.get('email');
-  
-  if (!name || !email) {
-    alert('Please fill in your name and email before proceeding.');
-    return;
-  }
-  
-  window.open(GOOGLE_FORM_URL, '_blank');
-  alert(`Thanks ${name}! Please complete the Google Form that just opened in a new tab.`);
-  e.target.reset();
-});
 
 function updateMemberCount(newCount) {
   data.stats.members = newCount;
@@ -125,3 +108,4 @@ function updateMemberCount(newCount) {
 }
 
 window.updateMemberCount = updateMemberCount;
+
